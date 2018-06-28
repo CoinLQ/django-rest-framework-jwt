@@ -65,7 +65,7 @@ class JSONWebTokenAPIView(APIView):
                 response.set_cookie(api_settings.JWT_AUTH_COOKIE,
                                     token,
                                     expires=expiration,
-                                    httponly=True,
+                                    httponly=False,
                                     domain=api_settings.JWT_COOKIE_DOMAIN)
             return response
 
